@@ -64,17 +64,6 @@ public class Leetcode {
 		return result;
 	}
 
-	public int[] sortedSquares(int[] nums) {
-		// Loop through the provided array
-		for (int i = 0; i < nums.length; i++) {
-			// assign the square of each value to the same position
-			nums[i] = nums[i] * nums[i];
-		}
-		// sort the resulting array in increasing order
-		Arrays.sort(nums);
-		return nums;
-	}
-
 	public static void main(String[] args) {
 		int[] nums = { 3, 0, 1 };
 		int n = missingNumber(nums);
