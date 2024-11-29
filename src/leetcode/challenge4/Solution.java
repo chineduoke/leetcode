@@ -1,31 +1,6 @@
-package leetcode;
+package leetcode.challenge4;
 
-import java.util.Arrays;
-
-public class Leetcode {
-	public static int missingNumber(int[] nums) {
-		// sort nums array to be able to identify the first and last numbers
-		Arrays.sort(nums);
-		int n = nums.length;
-
-		// Check if the first element is not equal to 0 and return 0
-		if (nums[0] != 0)
-			return 0;
-
-		// Check if the last element is not equal to the length of the array and return
-		// the array length
-		if (nums[n - 1] != n)
-			return n;
-
-		// loop through elements between 0 and the last element and return the element
-		// if not equal to index
-		for (int i = 1; i < nums.length; i++) {
-			if (nums[i] != i)
-				return i;
-		}
-
-		return 1;
-	}
+public class Solution {
 
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		// create a placeholder Head ListNode to help create the new Linkedlist
@@ -64,11 +39,6 @@ public class Leetcode {
 		return result;
 	}
 
-	public static void main(String[] args) {
-		int[] nums = { 3, 0, 1 };
-		int n = missingNumber(nums);
-		System.out.println(n);
-	}
 }
 
 // ListNode class for creating linkedlists
